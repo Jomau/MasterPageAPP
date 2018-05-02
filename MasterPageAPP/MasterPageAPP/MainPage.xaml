@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MasterPageAPP"
-             x:Class="MasterPageAPP.MainPage">
-
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
-</ContentPage>
+             x:Class="MasterPageAPP.MainPage"
+                  Title="MasterPrincipal">
+    <!--
+    <MasterDetailPage.Master>
+        <ContentPage Title="Maestro">
+            <StackLayout>
+                <Button Text="Soy el Maestro"></Button>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Detalle">
+            <StackLayout>
+                <Button Text="Soy el Detalle"></Button>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+-->
+    <MasterDetailPage.Master>
+        <local:Maestro></local:Maestro>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <local:Detalle></local:Detalle>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
